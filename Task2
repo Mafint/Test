@@ -1,0 +1,18 @@
+int[] myArray = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+{
+    Console.WriteLine("Revers array:");
+    PrintArrayReversed(myArray);
+}
+void PrintArrayReversed(int[] arr)
+{
+    PrintArrayReversed1(arr, arr.Length - 1);
+}
+
+void PrintArrayReversed1(int[] arr, int index)
+{
+    if (index >= 0)
+    {
+        Console.Write(arr[index] + " ");
+        PrintArrayReversed1(arr, index - 1);
+    }
+}
